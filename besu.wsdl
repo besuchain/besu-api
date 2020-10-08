@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:schemas="http://127.0.0.1:32777/schemas" xmlns:wsdl="http://127.0.0.1:32777/wsdl" targetNamespace="http://127.0.0.1:32777/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:tns="http://127.0.0.1:32777/schemas" targetNamespace="http://127.0.0.1:32777/schemas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="POST_net_peerCount_InputMessage" type="schemas:POST_net_peerCount_InputMessage" />
+      <xs:element name="POST_net_peerCount_OutputMessage" type="schemas:POST_net_peerCount_OutputMessage" />
+      <xs:element name="POST_eth_blockNumber_InputMessage" type="schemas:POST_eth_blockNumber_InputMessage" />
+      <xs:element name="POST_eth_blockNumber_OutputMessage" type="schemas:POST_eth_blockNumber_OutputMessage" />
+      <xs:element name="POST_eth_getTransactionByHash_InputMessage" type="schemas:POST_eth_getTransactionByHash_InputMessage" />
+      <xs:element name="POST_eth_getTransactionByHash_OutputMessage" type="schemas:POST_eth_getTransactionByHash_OutputMessage" />
+      <xs:element name="POST_eth_getBalance_InputMessage" type="schemas:POST_eth_getBalance_InputMessage" />
+      <xs:element name="POST_eth_getBalance_OutputMessage" type="schemas:POST_eth_getBalance_OutputMessage" />
+      <xs:element name="POST_eth_getTransactionReceipt_InputMessage" type="schemas:POST_eth_getTransactionReceipt_InputMessage" />
+      <xs:element name="POST_eth_getTransactionReceipt_OutputMessage" type="schemas:POST_eth_getTransactionReceipt_OutputMessage" />
+      <xs:complexType name="net_peerCount_Request">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="jsonrpc" type="xs:string" />
+          <xs:element minOccurs="1" name="method" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="params" type="xs:string" />
+          <xs:element minOccurs="1" name="id" type="xs:integer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="eth_blockNumber_Request">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="jsonrpc" type="xs:string" />
+          <xs:element minOccurs="1" name="method" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="params" type="xs:string" />
+          <xs:element minOccurs="1" name="id" type="xs:integer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="eth_getBalance_Request">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="jsonrpc" type="xs:string" />
+          <xs:element minOccurs="1" name="method" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="params" type="xs:string" />
+          <xs:element minOccurs="1" name="id" type="xs:integer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="eth_getTransactionReceipt_Request">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="jsonrpc" type="xs:string" />
+          <xs:element minOccurs="1" name="method" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="params" type="xs:string" />
+          <xs:element minOccurs="1" name="id" type="xs:integer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="eth_getTransactionByHash_Request">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="jsonrpc" type="xs:string" />
+          <xs:element minOccurs="1" name="method" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="unbounded" name="params" type="xs:string" />
+          <xs:element minOccurs="1" name="id" type="xs:integer" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_net_peerCount_InputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Body" type="schemas:net_peerCount_Request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_net_peerCount_OutputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_blockNumber_InputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Body" type="schemas:eth_blockNumber_Request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_blockNumber_OutputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getTransactionByHash_InputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Body" type="schemas:eth_getTransactionByHash_Request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getTransactionByHash_OutputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getBalance_InputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Body" type="schemas:eth_getBalance_Request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getBalance_OutputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Response" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getTransactionReceipt_InputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Body" type="schemas:eth_getTransactionReceipt_Request" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="POST_eth_getTransactionReceipt_OutputMessage">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="Response" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="POST_net_peerCount_InputMessage">
+    <part name="POST_net_peerCount_InputMessage" element="schemas:POST_net_peerCount_InputMessage" />
+  </message>
+  <message name="POST_net_peerCount_OutputMessage">
+    <part name="POST_net_peerCount_OutputMessage" element="schemas:POST_net_peerCount_OutputMessage" />
+  </message>
+  <message name="POST_eth_blockNumber_InputMessage">
+    <part name="POST_eth_blockNumber_InputMessage" element="schemas:POST_eth_blockNumber_InputMessage" />
+  </message>
+  <message name="POST_eth_blockNumber_OutputMessage">
+    <part name="POST_eth_blockNumber_OutputMessage" element="schemas:POST_eth_blockNumber_OutputMessage" />
+  </message>
+  <message name="POST_eth_getTransactionByHash_InputMessage">
+    <part name="POST_eth_getTransactionByHash_InputMessage" element="schemas:POST_eth_getTransactionByHash_InputMessage" />
+  </message>
+  <message name="POST_eth_getTransactionByHash_OutputMessage">
+    <part name="POST_eth_getTransactionByHash_OutputMessage" element="schemas:POST_eth_getTransactionByHash_OutputMessage" />
+  </message>
+  <message name="POST_eth_getBalance_InputMessage">
+    <part name="POST_eth_getBalance_InputMessage" element="schemas:POST_eth_getBalance_InputMessage" />
+  </message>
+  <message name="POST_eth_getBalance_OutputMessage">
+    <part name="POST_eth_getBalance_OutputMessage" element="schemas:POST_eth_getBalance_OutputMessage" />
+  </message>
+  <message name="POST_eth_getTransactionReceipt_InputMessage">
+    <part name="POST_eth_getTransactionReceipt_InputMessage" element="schemas:POST_eth_getTransactionReceipt_InputMessage" />
+  </message>
+  <message name="POST_eth_getTransactionReceipt_OutputMessage">
+    <part name="POST_eth_getTransactionReceipt_OutputMessage" element="schemas:POST_eth_getTransactionReceipt_OutputMessage" />
+  </message>
+  <portType name="Server1_PortType">
+    <operation name="POST_net_peerCount">
+      <documentation />
+      <input message="wsdl:POST_net_peerCount_InputMessage" />
+      <output message="wsdl:POST_net_peerCount_OutputMessage">
+        <documentation />
+      </output>
+    </operation>
+    <operation name="POST_eth_blockNumber">
+      <documentation />
+      <input message="wsdl:POST_eth_blockNumber_InputMessage" />
+      <output message="wsdl:POST_eth_blockNumber_OutputMessage">
+        <documentation />
+      </output>
+    </operation>
+    <operation name="POST_eth_getTransactionByHash">
+      <documentation />
+      <input message="wsdl:POST_eth_getTransactionByHash_InputMessage" />
+      <output message="wsdl:POST_eth_getTransactionByHash_OutputMessage">
+        <documentation />
+      </output>
+    </operation>
+  </portType>
+  <portType name="Server2_PortType">
+    <operation name="POST_eth_getBalance">
+      <documentation />
+      <input message="wsdl:POST_eth_getBalance_InputMessage" />
+      <output message="wsdl:POST_eth_getBalance_OutputMessage">
+        <documentation />
+      </output>
+    </operation>
+    <operation name="POST_eth_getTransactionReceipt">
+      <documentation />
+      <input message="wsdl:POST_eth_getTransactionReceipt_InputMessage" />
+      <output message="wsdl:POST_eth_getTransactionReceipt_OutputMessage">
+        <documentation />
+      </output>
+    </operation>
+  </portType>
+  <binding name="Server1_Binding" type="wsdl:Server1_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="POST_net_peerCount">
+      <soap:operation soapAction="POST_net_peerCount" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="POST_eth_blockNumber">
+      <soap:operation soapAction="POST_eth_blockNumber" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="POST_eth_getTransactionByHash">
+      <soap:operation soapAction="POST_eth_getTransactionByHash" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Server2_Binding" type="wsdl:Server2_PortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="POST_eth_getBalance">
+      <soap:operation soapAction="POST_eth_getBalance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="POST_eth_getTransactionReceipt">
+      <soap:operation soapAction="POST_eth_getTransactionReceipt" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output>
+        <soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="besu-sampleNetworks">
+    <documentation />
+    <port name="Server1_Port" binding="wsdl:Server1_Binding">
+      <soap:address location="http://127.0.0.1:32777" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+    <port name="Server2_Port" binding="wsdl:Server2_Binding">
+      <soap:address location="http://localhost:32777" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
